@@ -47,5 +47,20 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+router.put("/:id" , async (req, res) => {
+  try {
+    const equipment = await Equipment.findById(req.params.id);
+    if (!equipment) {
+      return res.status(404).json({ message: "Equipment not found." });
+    }
+
+    const updatedEquipment = await Equipment.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.json(updatedEquipment);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Something went wrong while updating the equipment." });
+  }
+});
+
 
 module.exports=router;
