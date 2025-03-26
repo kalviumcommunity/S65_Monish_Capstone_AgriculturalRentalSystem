@@ -58,7 +58,7 @@ The **Agricultural Equipment Rental System** is a **MERN stack web application**
 **Hosting:** Backend → Render, Frontend → Vercel  
 **Payments:** Stripe/PayPal  
 
----
+
 ##  Development Roadmap
 
 ### **Phase 1: Backend Setup & API Development** (Days 1-2)
