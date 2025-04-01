@@ -33,7 +33,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Get Equipment by ID
 router.get("/:id", async (req, res) => {
   try {
     const equipment = await Equipment.findById(req.params.id).populate("owner", "name email");
