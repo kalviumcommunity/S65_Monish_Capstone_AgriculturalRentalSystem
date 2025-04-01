@@ -14,6 +14,13 @@ mongoose.connect(process.env.MONGO_URI).then(()=>console.log('Connected to Mongo
 
 
 
+app.get("/", (req, res) => {
+    res.send("Welcome to the Agricultural Equipment Rental System API!");
+  });
+
+
+
+
 
 app.listen(PORT,()=>{
 
