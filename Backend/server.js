@@ -6,10 +6,19 @@ require('dotenv').config()
 
 
 
+const userroutes=require('./Routes/Userroutes')
+const equipmentroutes=require('./Routes/Equipmentroutes')
+
+
+
 app.use(express.json())
 
 
 mongoose.connect(process.env.MONGO_URI).then(()=>console.log('Connected to Mongodb')).catch(e=>console.log('Not Connected',e))
+
+
+app.use('/api',userroutes)
+app.use('/api',equipmentroutes)
 
 
 
