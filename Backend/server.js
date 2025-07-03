@@ -6,8 +6,10 @@ require('dotenv').config()
 const cors=require('cors')
 
 
+
 const userroutes=require('./Routes/Userroutes')
 const equipmentroutes=require('./Routes/Equipmentroutes')
+
 
 
 app.use(express.json())

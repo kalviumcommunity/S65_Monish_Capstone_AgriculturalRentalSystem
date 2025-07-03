@@ -17,7 +17,7 @@ const Signup=()=>{
         try{
             const response=await axios.post('http://localhost:5000/api/register',{name,email,password})
 
-            console.log(response.data)
+            console.log(response.data)  
             alert('signup succesfully')
 
 
