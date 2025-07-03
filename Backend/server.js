@@ -11,7 +11,7 @@ const userroutes=require('./Routes/Userroutes')
 const equipmentroutes=require('./Routes/Equipmentroutes')
 
 
-app.use(cors())
+
 app.use(express.json())
 
 
@@ -37,4 +37,6 @@ app.listen(PORT,()=>{
     console.log(`Server is running on the port ${PORT}`);
     
 })
+
+
 
